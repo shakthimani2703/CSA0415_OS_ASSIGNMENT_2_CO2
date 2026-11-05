@@ -1,0 +1,21 @@
+server (parent) PID 8296 creating 3 student sessions
+  session 1: PID 8298, parent 8296
+  session 2: PID 8299, parent 8296
+  session 3: PID 8300, parent 8296
+
+--- ps while sessions are blocked ---
+  PID  PPID STAT   RSS CMD
+ 8296  8287 S     1928 ./q1_fork 3
+ 8298  8296 S     1012 ./q1_fork 3
+ 8299  8296 S     1012 ./q1_fork 3
+ 8300  8296 S     1012 ./q1_fork 3
+
+--- /proc/<pid>/status of first session ---
+    Name:	q1_fork
+    State:	S (sleeping)
+    PPid:	8296
+    VmRSS:	    1012 kB
+    voluntary_ctxt_switches:	1
+session PID 8298 terminated, exit status 1
+session PID 8299 terminated, exit status 2
+session PID 8300 terminated, exit status 3
