@@ -1,0 +1,3 @@
+deadlocked jobs: J0 J1 J2
+recovery: abort J1 (loses 2 GPU-hours), releasing STO
+no deadlock remains - J3 and the restarted job can now proceed
