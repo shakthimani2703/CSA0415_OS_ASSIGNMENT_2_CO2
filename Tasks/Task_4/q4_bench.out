@@ -1,0 +1,4 @@
+size        pipe (ms)     shm (ms)  mqueue (ms)   check
+  1 MB           0.51         0.56         0.71   all sums correct
+ 10 MB           3.88         3.30         4.27   all sums correct
+100 MB          34.78        29.04        54.40   all sums correct
