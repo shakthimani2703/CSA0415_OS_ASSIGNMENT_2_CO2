@@ -1,0 +1,91 @@
+## FCFS
+Gantt: P1(0-8) P2(8-12) P3(12-21) P4(21-26)
+Proc  TAT  WT  RT
+P1      8   0   0
+P2     11   7   7
+P3     19  10  10
+P4     23  18  18
+Avg  15.25  8.75  8.75  switches=3
+## SJF (non-preemptive)
+Gantt: P1(0-8) P2(8-12) P4(12-17) P3(17-26)
+Proc  TAT  WT  RT
+P1      8   0   0
+P2     11   7   7
+P3     24  15  15
+P4     14   9   9
+Avg  14.25  7.75  7.75  switches=3
+## SRTF
+Gantt: P1(0-1) P2(1-5) P4(5-10) P1(10-17) P3(17-26)
+Proc  TAT  WT  RT
+P1     17   9   0
+P2      4   0   0
+P3     24  15  15
+P4      7   2   2
+Avg  13.00  6.50  4.25  switches=4
+## Priority (non-preemptive, 1 = highest)
+Gantt: P1(0-8) P3(8-17) P4(17-22) P2(22-26)
+Proc  TAT  WT  RT
+P1      8   0   0
+P2     25  21  21
+P3     15   6   6
+P4     19  14  14
+Avg  16.75 10.25 10.25  switches=3
+## Priority (preemptive)
+Gantt: P1(0-2) P3(2-11) P1(11-17) P4(17-22) P2(22-26)
+Proc  TAT  WT  RT
+P1     17   9   0
+P2     25  21  21
+P3      9   0   0
+P4     19  14  14
+Avg  17.50 11.00  8.75  switches=4
+## RR q=1
+Gantt: P1(0-1) P2(1-2) P1(2-3) P3(3-4) P2(4-5) P4(5-6) P1(6-7) P3(7-8) P2(8-9) P4(9-10) P1(10-11) P3(11-12) P2(12-13) P4(13-14) P1(14-15) P3(15-16) P4(16-17) P1(17-18) P3(18-19) P4(19-20) P1(20-21) P3(21-22) P1(22-23) P3(23-26)
+Proc  TAT  WT  RT
+P1     23  15   0
+P2     12   8   0
+P3     24  15   1
+P4     17  12   2
+Avg  19.00 12.50  0.75  switches=23
+## RR q=3
+Gantt: P1(0-3) P2(3-6) P3(6-9) P4(9-12) P1(12-15) P2(15-16) P3(16-19) P4(19-21) P1(21-23) P3(23-26)
+Proc  TAT  WT  RT
+P1     23  15   0
+P2     15  11   2
+P3     24  15   4
+P4     18  13   6
+Avg  20.00 13.50  3.00  switches=9
+## RR q=5
+Gantt: P1(0-5) P2(5-9) P3(9-14) P4(14-19) P1(19-22) P3(22-26)
+Proc  TAT  WT  RT
+P1     22  14   0
+P2      8   4   4
+P3     24  15   7
+P4     16  11  11
+Avg  17.50 11.00  5.50  switches=5
+## RR q=20
+Gantt: P1(0-8) P2(8-12) P3(12-21) P4(21-26)
+Proc  TAT  WT  RT
+P1      8   0   0
+P2     11   7   7
+P3     19  10  10
+P4     23  18  18
+Avg  15.25  8.75  8.75  switches=3
+## MLFQ q=2,4,FCFS
+Gantt: P1(0-2) P2(2-4) P3(4-6) P4(6-8) P1(8-12) P2(12-14) P3(14-18) P4(18-21) P1(21-23) P3(23-26)
+Proc  TAT  WT  RT
+P1     23  15   0
+P2     13   9   1
+P3     24  15   2
+P4     18  13   3
+Avg  19.50 13.00  1.50  switches=9
+
+## Video workload (F=film 1200 s, T=thumbnail 2 s)
+FCFS                   avgWT all= 1372.1  thumbs WT= 1680.6 RT=1680.6  films WT=  601.0  switches=6
+SJF                    avgWT all= 1029.9  thumbs WT= 1200.6 RT=1200.6  films WT=  603.0  switches=6
+SRTF                   avgWT all=  174.9  thumbs WT=    1.6 RT=   1.6  films WT=  608.0  switches=7
+RR q=1                 avgWT all=  349.0  thumbs WT=    6.0 RT=   2.2  films WT= 1206.5  switches=2407
+RR q=3                 avgWT all=  348.6  thumbs WT=    6.0 RT=   6.0  films WT= 1205.0  switches=803
+RR q=5                 avgWT all=  350.6  thumbs WT=    8.6 RT=   8.6  films WT= 1205.5  switches=484
+RR q=20                avgWT all=  362.7  thumbs WT=   28.6 RT=  28.6  films WT= 1198.0  switches=124
+MLFQ q=2,4,FCFS        avgWT all=  177.0  thumbs WT=    3.4 RT=   3.4  films WT=  611.0  switches=10
+MLFQ q=4,16,FCFS       avgWT all=  181.0  thumbs WT=    6.2 RT=   6.2  films WT=  618.0  switches=10
