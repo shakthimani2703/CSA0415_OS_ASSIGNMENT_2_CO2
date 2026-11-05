@@ -1,0 +1,5 @@
+pool of  1 processes: 0.821 s  flagged=129
+pool of  2 processes: 0.415 s  flagged=129
+pool of  4 processes: 0.420 s  flagged=129
+pool of  8 processes: 0.409 s  flagged=129
+pool of 16 processes: 0.420 s  flagged=129

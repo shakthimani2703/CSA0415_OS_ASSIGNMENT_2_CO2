@@ -1,0 +1,5 @@
+run 1: unprotected=1958618  mutex=2000000  atomic=2000000  (expected 2000000)
+run 2: unprotected=1942847  mutex=2000000  atomic=2000000  (expected 2000000)
+run 3: unprotected=1934039  mutex=2000000  atomic=2000000  (expected 2000000)
+run 4: unprotected=1943189  mutex=2000000  atomic=2000000  (expected 2000000)
+run 5: unprotected=1930030  mutex=2000000  atomic=2000000  (expected 2000000)

@@ -1,0 +1,8 @@
+CPUs online: 2
+sequential                   0.806 s  speed-up 1.00  flagged=129
+one thread per camera (64)   0.420 s  speed-up 1.92  flagged=129
+pool of 1 threads            0.852 s  speed-up 0.95  flagged=129
+pool of 2 threads            0.424 s  speed-up 1.90  flagged=129
+pool of 4 threads            0.427 s  speed-up 1.89  flagged=129
+pool of 8 threads            0.431 s  speed-up 1.87  flagged=129
+pool of 16 threads           0.418 s  speed-up 1.93  flagged=129
