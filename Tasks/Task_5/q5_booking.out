@@ -1,0 +1,13 @@
+granularity       agents     time (s)     bookings/s      check
+one global lock        1        0.065        6165070 no double sale
+one global lock        2        0.526        1520321 no double sale
+one global lock        4        0.410        3901199 no double sale
+one global lock       16        1.958        3268588 no double sale
+lock per train         1        0.066        6024934 no double sale
+lock per train         2        0.108        7389005 no double sale
+lock per train         4        0.204        7830798 no double sale
+lock per train        16        0.797        8030669 no double sale
+lock per coach         1        0.066        6035204 no double sale
+lock per coach         2        0.087        9154537 no double sale
+lock per coach         4        0.166        9665013 no double sale
+lock per coach        16        0.675        9485254 no double sale

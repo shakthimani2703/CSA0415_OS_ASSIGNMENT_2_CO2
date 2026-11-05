@@ -1,0 +1,20 @@
+Short critical section (counter++ only), 4000000 updates in total
+method             threads      ns/update     CPU/wall    correct
+mutex                    1           19.2         0.99        yes
+mutex                    4           50.1         1.77        yes
+mutex                   16           55.6         1.85        yes
+spin lock                1            9.8         1.00        yes
+spin lock                4          132.0         1.97        yes
+spin lock               16          399.6         1.97        yes
+atomic_fetch_add         1            8.8         1.00        yes
+atomic_fetch_add         4           18.9         1.90        yes
+atomic_fetch_add        16           19.5         1.98        yes
+
+Long critical section (~5000-iteration loop inside the lock), 40000 updates
+method             threads      us/update     CPU/wall   CPU time (s)
+mutex                    1           2.58         0.99           0.10
+mutex                    4           3.72         1.08           0.16
+mutex                   16           2.83         1.05           0.12
+spin lock                1           2.16         1.00           0.09
+spin lock                4           3.93         1.99           0.31
+spin lock               16          10.59         1.98           0.84

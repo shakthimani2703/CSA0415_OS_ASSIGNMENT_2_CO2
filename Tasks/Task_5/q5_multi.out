@@ -1,0 +1,6 @@
+1 producers, 1 consumers, mutex on : 100000 items, exactly once=100000, lost=0, duplicated=0 -> CORRECT
+4 producers, 4 consumers, mutex on : 400000 items, exactly once=400000, lost=0, duplicated=0 -> CORRECT
+1 producers, 1 consumers, mutex off: 100000 items, exactly once=100000, lost=0, duplicated=0 -> CORRECT
+4 producers, 4 consumers, mutex off: 400000 items, exactly once=383305, lost=8362, duplicated=8362 -> WRONG
+4 producers, 4 consumers, mutex off: 400000 items, exactly once=382758, lost=8636, duplicated=8636 -> WRONG
+4 producers, 4 consumers, mutex off: 400000 items, exactly once=385105, lost=7463, duplicated=7463 -> WRONG

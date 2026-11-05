@@ -1,0 +1,6 @@
+Peterson, plain volatile : count = 9999924 (expected 10000000) -> MUTUAL EXCLUSION VIOLATED
+Peterson, seq_cst atomics: count = 10000000 (expected 10000000) -> mutual exclusion held
+Peterson, plain volatile : count = 9999931 (expected 10000000) -> MUTUAL EXCLUSION VIOLATED
+Peterson, seq_cst atomics: count = 10000000 (expected 10000000) -> mutual exclusion held
+Peterson, plain volatile : count = 9999867 (expected 10000000) -> MUTUAL EXCLUSION VIOLATED
+Peterson, seq_cst atomics: count = 10000000 (expected 10000000) -> mutual exclusion held
